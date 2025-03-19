@@ -23,6 +23,7 @@ public class MenuImplementacion implements MenuInterfaz {
 		case 1: {
 			
 			esCerrado = true;
+			System.out.println("Cerrando la aplicación...");
 			break;
 		}
 		case 2: {
