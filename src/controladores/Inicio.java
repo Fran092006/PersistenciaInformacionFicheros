@@ -22,7 +22,6 @@ public class Inicio {
 	public static void main(String[] args) {
 		
 		
-		
 		MenuInterfaz menuInterfaz = new MenuImplementacion();
 		OperativaInterfaz operativaInterfaz = new OperativaImplementacion();
 		

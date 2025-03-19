@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.time.LocalDate;
 
 import controladores.Inicio;
@@ -92,6 +93,13 @@ public class OperativaImplementacion implements OperativaInterfaz {
 		boolean primeraLinea = true;
 
 		try {
+			
+			Files.write(path, "matricula:fchMatriculacion:dni:fchCompra".getBytes());
+			Files.write(path, "\n1234ATT:12-12-2019:12345678A:12-12-2019\n".getBytes(), StandardOpenOption.APPEND);
+			Files.write(path, "9876WWW:10-11-2021:23456789P:21-12-2023\n".getBytes(), StandardOpenOption.APPEND);
+			Files.write(path, "4567UOP:20-10-1998:98765432R:20-10-1999\n".getBytes(), StandardOpenOption.APPEND);
+			Files.write(path, "4567UPO:20-10-1996:34567891I:20-10-2003".getBytes(), StandardOpenOption.APPEND);
+			
 			Inicio.lineasCsv.addAll(Files.readAllLines(path));
 		} catch (IOException e) {
 
